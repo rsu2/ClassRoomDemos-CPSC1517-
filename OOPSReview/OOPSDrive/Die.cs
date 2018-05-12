@@ -40,7 +40,7 @@ namespace OOPSDrive
                 //this will return the private data member
                 return _Sides;
             }
-            set
+            private set
             {
 
                 //the reseverd key word "value " is used to 
@@ -54,7 +54,9 @@ namespace OOPSDrive
         //does not have a private data member
         //the system creates an internal data storage member
         //  for the property
-        public int FaceValue{ get; set; }
+        //for the outside user, this property is now readonly
+        //methods and code within the class still have access to set{}
+        public int FaceValue{ get; private set; }
 
         //within a property you can validate that
         //the incoming data value is "what is expected"
@@ -112,7 +114,11 @@ namespace OOPSDrive
         //      this constructor would be called for --> new classname();
         public Die()
         {
-
+            //even though the Sides would be set to a value numberic
+            //      within this class a more logical value would be 6
+            Sides = 6;
+            Color = "White";
+            Roll();
         }
         //"Greedy" consstructor
         //this constructor usuallyreceives a list of parameter,
@@ -126,6 +132,31 @@ namespace OOPSDrive
             Sides = sides; //the set{} of the property Sides is used
             Color = color;
         }
+        //Behaviours
+        //these are methods
+        public void Roll()
+        {
+            //will be used to generate a new facevalue for the instance
+            //an instance of the math class Random() has been coded at the 
+            //      top of this class
+            //the method in the class Random that will be called is 
+            //      .Next(inclusive lowest number, exlcusive highest number)
+            FaceValue = _rnd.Next(1, Sides + 1);           
+        }
 
+        public void SetSides(int sides)
+        {
+            //let us assume only 6 to 20 sides dice are allowed
+            if(sides > 5 && sides < 21)
+            {
+                Sides = sides;
+                Roll();
+            }
+            else
+            {
+                //bad input 
+                throw new Exception("Invalid number of sides for the dice");
+            }
+        }
     }
 }
