@@ -88,6 +88,43 @@ namespace OOPSDrive
                     _Color = value;
                 }
             }
+        }//end of property
+
+        //constructors
+        //constructors are NOT directly call by the outside user
+        //constructors are called indirectly when the outside user
+        //      creates an instance of the class
+        //to create an instance of the class the outside user
+        // will declare the class variable name = new class();
+        //it is the "nwe" that calls the contrstructor
+        
+        //you may or not may have a constructor for your class
+        //IF you do NOT code a constructor for your class then
+        //      a default system constructor is executed
+        //This default system constructor initializes your locate
+        //  data members to their default C# values.
+        
+        //If you do code a constructor for your class then
+        //      YOU are responsible for all/any constructor in the class
+
+        //"Default" constructor
+        //This constructor is sinilar to the system constructor
+        //      this constructor would be called for --> new classname();
+        public Die()
+        {
+
+        }
+        //"Greedy" consstructor
+        //this constructor usuallyreceives a list of parameter,
+        //     one for each data member in the class
+        //the constructor takes the parameter values and assigns
+        //     the value to the appropriate data member
+        //athis constructor would be called for --> new classname (value1, value2,...)
+
+        public Die(int sides,string color)
+        {
+            Sides = sides; //the set{} of the property Sides is used
+            Color = color;
         }
 
     }
