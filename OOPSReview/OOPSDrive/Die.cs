@@ -126,11 +126,11 @@ namespace OOPSDrive
         //the constructor takes the parameter values and assigns
         //     the value to the appropriate data member
         //athis constructor would be called for --> new classname (value1, value2,...)
-
         public Die(int sides,string color)
         {
             Sides = sides; //the set{} of the property Sides is used
             Color = color;
+            Roll();
         }
         //Behaviours
         //these are methods
