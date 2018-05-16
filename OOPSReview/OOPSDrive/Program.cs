@@ -48,7 +48,7 @@ namespace OOPSDrive
                             //  local variable Player1Dice and
                             //  Player2Dice passed to it.
                             //object are passed as references
-                            SetDiceSides(Player1Dice,Player2Dice);
+                            SetDiceSide(Player1Dice,Player2Dice);
                             break;
                         }
                     case "B":
@@ -128,6 +128,24 @@ namespace OOPSDrive
 
                     case "X":
                         {
+                            //display summary results of game
+                            int[] counts = new int[] { 0, 0, 0 };
+                            foreach (var aturn in gameTurns)
+                            {
+                                if(aturn.TurnWinner.Equals("Player1"))
+                                {
+                                    counts[0]++;
+                                }
+                                else if(aturn.TurnWinner.Equals("Player2"))
+                                {
+                                    counts[1]++;
+                                }
+                                else
+                                {
+                                    counts[2]++;
+                                }
+                            }
+                            Console.Write("Player1 wins {0} Player2 wins {1} Draw {2}", counts[0], counts[1], counts[2]);
                             Console.WriteLine("Thank you for playing. Come again.");
                             break;
                         }
