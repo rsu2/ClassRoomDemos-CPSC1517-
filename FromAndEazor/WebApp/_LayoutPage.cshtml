@@ -2,7 +2,6 @@
 
 <html lang="en-us">
 <head>
-    <meta name="viewport" content="width=device-width" />
     <title>@Page.Title</title>
     <script src="~/Scripts/jquery-3.3.1.js"></script>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
@@ -10,7 +9,7 @@
     <link href="~/Content/myStyleSheet1.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container-fluid">
+    
         <!-- this will be the menu area -->
         <div class="navbar navbar-default navbar-fixed-top">
             <!-- this will be the title on the menu (brand)-->
@@ -42,14 +41,17 @@
             </ul>
         </div>
             <br /><br />
+                  <div class="container-fluid">
 
-            <div class="jumbotron">
-                @RenderSection("banner", required: true)
-            </div>
-             @RenderBody()
-             <br />
-             <hr style="line-height:5px" />
-             @RenderSection("footer", required: false)
-    </div>
+
+                      <div class="jumbotron">
+                          @RenderSection("banner", required: true)
+                      </div>
+                      @RenderBody()
+                      <br />
+                      <hr style="line-height:5px" />
+                      @RenderSection("footer", required: false)
+                  </div>
+    
 </body>
 </html>
