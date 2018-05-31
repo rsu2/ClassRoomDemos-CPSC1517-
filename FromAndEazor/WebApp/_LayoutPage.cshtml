@@ -30,20 +30,27 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li>
-                            <a href="@Href("~/Controls/TextBoxes.cshtml")">TextBox</a>
-                            <a href="@Href("~/Controls/RadioButtonList.cshtml")">RadioButtonList</a>
-                            <a href="@Href("~/Controls/CheckBoxes.cshtml")">CheckBoxes</a>
-                            <a href="@Href("~/Controls/DropDownList.cshtml")">DropDownList</a>
-                        </li>
+                        <li><a href="@Href("~/Controls/TextBoxes.cshtml")">TextBox</a></li>
+                        <li><a href="@Href("~/Controls/RadioButtons.cshtml")">RadioButtons</a></li>
+                        <li><a href="@Href("~/Controls/CheckBoxes.cshtml")">CheckBoxes</a></li>
+                        <li><a href="@Href("~/Controls/DropDown.cshtml")">DropDown</a></li>
                     </ul>
-                </li>              
-            </ul>
-        </div>
+                </li>
+
+                <li class="dropdown">
+                <!--this will be the menu root item-->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        DB Sample
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Href("~/DBPages/DBSingleQuery.cshtml")">Single Query</a></li>            
+                    </ul>
+                </li>
+           </ul>         
+
             <br /><br />
-                  <div class="container-fluid">
-
-
+                 
                       <div class="jumbotron">
                           @RenderSection("banner", required: true)
                       </div>
