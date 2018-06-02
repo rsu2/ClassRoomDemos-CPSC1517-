@@ -115,6 +115,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="DBPages\DBSingleQuery.cshtml" />
+    <Content Include="DBPages\MultiRecodeQuery.cshtml" />
+    <Content Include="DBPages\WebGridPage.cshtml" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
