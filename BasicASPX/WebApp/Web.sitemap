@@ -8,7 +8,8 @@
         A drop down menu has separate siteMapNode opening and closeing tags-->
     <siteMapNode url="" title="Sample"  description="">
         <!--A siteMapNode, here, is an item on your drop down menu-->
-    <siteMapNode url="~/SmplePages/Hello.aspx" title="Hello"  description="" />
+    <siteMapNode url="~/SamplePages/Hello.aspx" title="Hello"  description="" />
+    <siteMapNode url="~/SamplePages/basicControls.aspx" title="BasicControls"  description="" />  
   </siteMapNode>
   <siteMapNode url="~/About.aspx" title="About"  description="" />
   <siteMapNode url="~/Contact.aspx" title="Contact"  description="" />

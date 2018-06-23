@@ -56,8 +56,16 @@
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>--%>
+                    <!--use by default sitemap data source-->
                     <asp:Menu ID="Menu1" runat="server"
-                        DataSourceID="SiteMapNav"></asp:Menu>
+                        DataSourceID="SiteMapNav"
+                        Orientation="Horizontal"
+                        StaticDisplayLevels="1"
+                        StaticMenuStyle-CssClass="nav navbar-nav"
+                        StaticSelectedStyle-CssClass="active"
+                        dynmicmenustyle-CssClass="dropdown-menu"
+                        IncludeStyleBlock="false" EnableTheming="false"
+                        EnableViewState="false"></asp:Menu>
 
                     <!--use by default Web.sitemap-->
                     <asp:SiteMapDataSource ID="SiteMapNav" runat="server" 
