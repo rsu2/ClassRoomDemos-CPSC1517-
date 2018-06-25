@@ -22,7 +22,7 @@
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
+                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
                 <asp:ScriptReference Name="respond" />
@@ -63,7 +63,7 @@
                         StaticDisplayLevels="1"
                         StaticMenuStyle-CssClass="nav navbar-nav"
                         StaticSelectedStyle-CssClass="active"
-                        dynmicmenustyle-CssClass="dropdown-menu"
+                        DynamicMenuStyle-CssClass="dropdown-menu"
                         IncludeStyleBlock="false" EnableTheming="false"
                         EnableViewState="false"></asp:Menu>
 
