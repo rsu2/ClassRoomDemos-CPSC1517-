@@ -20,7 +20,8 @@
                 <td>
                     <asp:TextBox ID="TextBoxNumberChoice" runat="server"></asp:TextBox>
                     <asp:Button ID="SubmitButtonChoice" runat="server" 
-                         CssClass="btn btn-primary" Text="Submit Choice" /> &nbsp; (Enter a number from 1 to 4)
+                         CssClass="btn btn-primary" Text="Submit Choice" 
+                         OnClick="SubmitButtonChoice_Click" /> &nbsp; (Enter a number from 1 to 4)
                 </td>
             </tr>
             <tr>
@@ -53,7 +54,7 @@
                     <asp:Label ID="Label3" runat="server" Text="View Collection"></asp:Label></td>
                 <td>
                     <asp:DropDownList ID="CollectionList" runat="server"></asp:DropDownList>
-                    <asp:LinkButton ID="LinkButtonSubmitChoice" runat="server">Submit Collection Choice</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButtonSubmitChoice" runat="server" OnClick="LinkButtonSubmitChoice_Click">Submit Collection Choice</asp:LinkButton>
                 </td>
             </tr>
             <tr>
