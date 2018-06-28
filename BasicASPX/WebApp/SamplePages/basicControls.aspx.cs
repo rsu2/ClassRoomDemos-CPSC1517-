@@ -36,8 +36,8 @@ namespace WebApp.SamplePages
 
                 //add data to the collection, one entry at a time
                 DataCollection.Add(new DDLClass(1, "COMP1008"));
-                DataCollection.Add(new DDLClass(2, "DMIT1508"));
-                DataCollection.Add(new DDLClass(3, "CPSC1517"));
+                DataCollection.Add(new DDLClass(3, "DMIT1508"));
+                DataCollection.Add(new DDLClass(2, "CPSC1517"));
                 DataCollection.Add(new DDLClass(4, "DMIT2018"));
 
                 //usually lists are sorted 
@@ -93,6 +93,28 @@ namespace WebApp.SamplePages
                 //SelectedItem returns the data display associated with the physical line
                 RadioButtonListChoice.SelectedValue = submitchoice;
 
+                //CheckBox: Property: Checked (boolean)
+                if (submitchoice.Equals("2") || submitchoice.Equals("4"))
+                {
+                    CheckBoxChoice.Checked = true;
+
+                }
+                else
+                {
+                    CheckBoxChoice.Checked = false;
+                }
+
+                //DropDownList : Property : SelectedValue (preferred)
+                //                        : SelectedIndex
+                CollectionList.SelectedValue = submitchoice;
+
+                //Label(Literal) Property : Text 
+                //demostrate using SelectedIndex, SelectedValue and SelectedItem
+                //  to obtain data off the dropdownlist
+                //The data will be concatentated into a single string
+                DisplayDataReadOnly.Text = CollectionList.SelectedItem.Text
+                      + " at index " + CollectionList.SelectedIndex.ToString()
+                      + " having a value of " + CollectionList.SelectedValue;
 
             }
         }
