@@ -121,10 +121,35 @@ namespace WebApp.SamplePages
 
         protected void LinkButtonSubmitChoice_Click(object sender, EventArgs e)
         {
-            //Label Property : Text 
-            MessageLabel.Text = "You pressed the Submit Choice linkbutton";
-        }
+            //when you have a pro,pt line in your dropdownlist, you should 
+            //  test for it an do appropriate code to hanbdle the situation
+            if(CollectionList.SelectedIndex == 0)
+            {
+                MessageLabel.Text = "Please selected a course.";
+            }
+            else
+            {
+                //DDL Property: SelectedValue, SelectedIndex, SelectedItem
+                string ddlselection = CollectionList.SelectedValue;
+                TextBoxNumberChoice.Text = ddlselection;
+                RadioButtonListChoice.SelectedValue = ddlselection;
+                //CheckBox; Property : Checked )boolean)
+                if (ddlselection.Equals("2") || ddlselection.Equals("4"))
+                {
+                    CheckBoxChoice.Checked = true;
 
-        
+                }
+                else
+                {
+                    CheckBoxChoice.Checked = false;
+                }
+                DisplayDataReadOnly.Text = CollectionList.SelectedItem.Text
+                    + " at index " + CollectionList.SelectedIndex.ToString()
+                    + " having a value of " + CollectionList.SelectedValue;
+            }
+            ////Label Property : Text 
+            //MessageLabel.Text = "You pressed the Submit Choice linkbutton";
+
+        }      
     }
 }
