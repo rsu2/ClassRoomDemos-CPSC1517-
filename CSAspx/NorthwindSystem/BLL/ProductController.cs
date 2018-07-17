@@ -40,24 +40,7 @@ namespace NorthwindSystem.BLL
         }
     }
 
-    public class CategoryController
-    {
-        public List<Category> Categories_List()
-        {
-            using (var context = new NorthwindContext())
-            {
-                return context.Categories.ToList();
-            }
-
-        }
-        public Category Categories_GetCategory(int categoryid)
-        {
-            using (var context = new NorthwindContext())
-            {
-                return context.Categories.Find(categoryid);
-            }
-        }
-    }
+   
 
     public class SupplierController
     {
