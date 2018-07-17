@@ -22,7 +22,7 @@ namespace NorthwindSystem.DAL
     {
         // we need to pass the database connection to the EntityFramework DbContext class
         // this is done via the NortwindContext constructor
-        public NorthwindContext(): base("NWBD")
+        public NorthwindContext(): base("NWDB")
         {
 
         }
@@ -33,7 +33,8 @@ namespace NorthwindSystem.DAL
         public DbSet<Product> Products { get; set; }
         //T is the data definition of the table
         //Product is the property name of the table 
-
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
 
     }
 }
