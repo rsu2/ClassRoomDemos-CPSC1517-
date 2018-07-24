@@ -58,16 +58,16 @@ namespace WebApp.SamplePages
                 //or
                 //there may be a need for logic control
                 //validation 
-                if (terms) //was the checkbox checked?
-                {
-                    //create an instance of the Entry using the greedy constructor
-                    Entry theEntry = new Entry(firstname, lastname, streetaddress1, streetaddress2, city, province, postalcode, email);
-                    //add to the collection of entries
-                    contestentries.Add(theEntry);
-                    //attach the collection of entries to the 
-                    //  GridView control 
-                    ContestEntries.DataSource = contestentries;
-                    ContestEntries.DataBind();                  
+                //if (terms) //was the checkbox checked?
+                //{
+                //    //create an instance of the Entry using the greedy constructor
+                //    Entry theEntry = new Entry(firstname, lastname, streetaddress1, streetaddress2, city, province, postalcode, email);
+                //    //add to the collection of entries
+                //    contestentries.Add(theEntry);
+                //    //attach the collection of entries to the 
+                //    //  GridView control 
+                //    ContestEntries.DataSource = contestentries;
+                //    ContestEntries.DataBind();                  
                 }
                 else
                 {

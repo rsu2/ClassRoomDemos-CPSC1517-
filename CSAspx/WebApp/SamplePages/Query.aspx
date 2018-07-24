@@ -23,7 +23,7 @@
             <asp:Label ID="label1" runat="server" AssociatedControlID="ProductList"
                 text="Select a product to manage:"></asp:Label>
             <asp:DropDownList ID="ProductList" runat="server"></asp:DropDownList>
-             <asp:Button ID="SearchProduct" runat="server" OnClick="SearchProduct_Click" text="Fetch"></asp:Button>
+             <asp:Button ID="SearchProduct" runat="server" OnClick="SearchProduct_Click" text="Fetch" CausesValidation="false"></asp:Button>
             <br/>
             <asp:Label ID="Label2" runat="server" AssociatedControlID="ProductID" 
                 text="ID:"></asp:Label>
@@ -69,9 +69,9 @@
     <br />
     <div class ="row col-md-offset-2">
         <asp:Button ID ="Add" runat="server" Text="Add" Height="26px" OnClick="Add_Click" width="61px" />
-        <asp:Button ID ="Update" runat="server" Text="Update" height="26px" OnClick="Update_Click" width="61px" />
+        <asp:Button ID ="Update" runat="server" Text="Update" height="26px" OnClick="Update_Click" width="67px" />
         <asp:Button ID ="Delete" runat="server" Text="Delete" OnClick="Delete_Click" />
-        <asp:Button ID ="Clear" runat="server" Text="Clear" height="26px" OnClick="Clear_Click" width="61px" />
+        <asp:Button ID ="Clear" runat="server" Text="Clear" height="26px" OnClick="Clear_Click" width="67px" />
     </div>
 
 </asp:Content>
