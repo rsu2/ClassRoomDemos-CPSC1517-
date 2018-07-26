@@ -91,7 +91,7 @@ namespace WebApp.SamplePages
                 CategoryList.DataBind();
                 CategoryList.Items.Insert(0, "select ...");
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
                 errormsgs.Add("File Error: " + GetInnerException(ex).Message);
                 LoadMessageDisplay(errormsgs, "alert alert-warning");

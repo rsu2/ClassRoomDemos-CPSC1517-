@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 #region
 using System.Collections.Generic;
 using NorthwindSystem.DAL;
+using Northwind.Data.Views;
+using System.Data.SqlClient;
 #endregion
 
 namespace NorthwindSystem.BLL

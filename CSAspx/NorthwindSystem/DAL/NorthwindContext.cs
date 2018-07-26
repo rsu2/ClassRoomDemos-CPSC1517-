@@ -35,6 +35,7 @@ namespace NorthwindSystem.DAL
         //Product is the property name of the table 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
-
+        public DbSet<Region>Regions { get; set; }
+        public DbSet<Territory> Territories { get; set; }
     }
 }
