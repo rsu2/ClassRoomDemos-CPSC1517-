@@ -46,10 +46,12 @@
                        + "FROM Suppliers "
                        + "ORDER BY CompanyName";
     var querySuppliers = db.Query(supplierStatement);
+
     var categoryStatement = "SELECT CategoryID, CategoryName "
                        + "FROM Categories "
                        + "ORDER BY CategoryName";
     var queryCategories = db.Query(categoryStatement);
+
     var queryStatement = "SELECT ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued "
                         + "FROM Products "
                         + "WHERE ProductID = @0";

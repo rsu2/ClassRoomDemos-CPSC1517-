@@ -31,5 +31,15 @@ namespace NorthwindSystem.BLL
                 return context.Suppliers.Find(supplierid);
             }
         }
+        public List<SupplierCategories> Suppliers_GetCategories(int suppilerid)
+        {
+            using (var context = new NorthwindContext())
+            {
+                IEnumerable<SupplierCategories> results =
+                    context.Database.SqlQuery<SupplierCategories>("Suppliers_GetCategories @SupplierID",
+                                    new SqlParameter("SupplierID", suppilerid));
+                return results.ToList();
+            }
+        }
     }
 }
